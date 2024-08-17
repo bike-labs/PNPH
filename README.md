@@ -115,7 +115,7 @@
 
 - 价格因素
   - 用户 sequencer
-    - Circut size （demand）电路门大小，复杂度
+    - Circuit size （demand）电路门大小，复杂度
     - tips 紧急度 加钱。
   - Prover
     - minUnitPrice 报价，最低算力单价 → 网络抖动问题
