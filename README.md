@@ -120,22 +120,25 @@
   - Prover
     - minUnitPrice 报价，最低算力单价 → 网络抖动问题
     - averageUnitPrice 报价，平均报价 → 解决网络抖动，平均报价是根据，目前有空闲的最活跃的 n 个节点的历史报价给出平均费率。
-      $$
-      \text{TotalPrice} = (\text{averageUnitPrice}+ \text{tips}) \times \text{circutSize}
-      $$
+
+      $\text{TotalPrice} = (\text{averageUnitPrice}+ \text{tips}) \times \text{circutSize}$
+
       问题：单个 prover 价格过低，吃掉太多的利润
+      
       p1: power 1, money1;
+      
       p2:power2, money2;
+      
       **算力=单位时间内能解决的问题数**
 - 匹配机制
   - 算力剩余要满足 User 需要的算力
-    $$
-    \text{Power}_\text{Prover} > \text{Demand}_\text{User}
-    $$
+
+    $\text{Power} _ \text{Prover} > \text{Demand} _ \text{User}$
+
   - 用户报价，从高到低，高的优先处理，低的会根据 first in first serve，在截止时间前会强行派单。
   - prover 排序，按照报价从低到高排序，低的优先接单。
   - **第二优先级是价格，可以作为启动因素。**
 - 冷却机制/惩罚机制
-  - prover 需要质押/交保证金来成为 prover。质押的金额要根据你的算力。根据你的算力大小成正比。$\text{stakedPrice} = k \cdot \text{Capability}$
-  - 每次没按时完成任务，会扣一部分押金，暂定$\frac{1}{5}$押金。类似于扣信用分。
+  - prover 需要质押/交保证金来成为 prover。质押的金额要根据你的算力。根据你的算力大小成正比。 $\text{stakedPrice} = k \cdot \text{Capability}$
+  - 每次没按时完成任务，会扣一部分押金，暂定 $\frac{1}{5}$ 押金。类似于扣信用分。
 - 优先级排序
